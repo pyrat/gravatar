@@ -41,6 +41,15 @@ An HTML tag helper is included. Wherever you might use:
   
 Consider using:
 
-  <%= gravatar_tag user %>
+  <%= gravatar_for user %>
+
+It may also take the same options as the `gravatar(..)` method in the mixin:
+
+  <%= gravatar_for user, { :attr => :email_address } %>
+
+As well as HTML options, like the `image_tag` helper:
+
+  <%= gravatar_for user, { :attr => :email_address }, { :border => 5 } %>
+
 
 Copyright (c) 2009 Juris Galang, released under the MIT license
