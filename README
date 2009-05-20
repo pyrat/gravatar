@@ -4,13 +4,13 @@ Gravatar
 This plugin brings a mixin and a helper to associate Rails models with gravatar resources.
 
 Installation
-============
+------------
 
-  cd /path/to/app/vendors/plugin
-  git clone git://github.com/jurisgalang/gravatar.git
+  cd /path/to/app
+  ./script/plugin install git://github.com/jurisgalang/gravatar.git
   
 Usage
-=====
+-----
 
 Simply mixin the Gravatar module into the model that needs to be associated with a gravatar resource:
 
@@ -37,8 +37,8 @@ You can further customise how the URL is computed by supplying additional option
 
 See http://en.gravatar.com/site/implement/url for details on computing gravatar URLs.
 
-
-### HTML Tag Helper
+HTML Tag Helper
+---------------
 
 An HTML tag helper is included. Wherever you might use:
 
