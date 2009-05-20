@@ -29,12 +29,6 @@ module Gravatar
   module Attributes
     AVATAR_URL = "http://www.gravatar.com/avatar"
 
-    module Size
-      SMALL  = 40
-      MEDIUM = 80
-      LARGE  = 160
-    end
-
     module Rating
       G  = 'g'
       PG = 'pg'
@@ -59,7 +53,7 @@ module Gravatar
     #                The URI of the default image may also be specified (see: http://en.gravatar.com/site/implement/url)
     def gravatar(options={})
       options[:attr]    ||= :email
-      options[:size]    ||= Size::MEDIUM
+      options[:size]    ||= 80
       options[:rating]  ||= Rating::G
       options[:default] ||= DefaultImage::GRAVATAR
       options[:default] = CGI::escape(options[:default]) if options[:default] =~ /^(https?:\/\/|\/)/i 
