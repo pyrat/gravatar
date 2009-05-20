@@ -63,7 +63,8 @@ module Gravatar
       options[:rating]  ||= Rating::G
       options[:default] ||= DefaultImage::GRAVATAR
       options[:default] = CGI::escape(options[:default]) if options[:default] =~ /^(https?:\/\/|\/)/i 
-      id                = Digest::MD5.hexdigest(self.send(options[:attr]))
+      email             = "#{self.send(options[:attr])}".downcase
+      id                = Digest::MD5.hexdigest(email)
       params            = options.collect{ |k, v| "#{k}=#{v}" }.join('&')
       "#{AVATAR_URL}/#{id}?#{params}"
     end
