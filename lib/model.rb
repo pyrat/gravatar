@@ -46,8 +46,7 @@ module Gravatar
           @@gravatar_options = {
             :attr    => :email,
             :size    => 80,
-            :rating  => Attributes::Rating::G,
-            :default => Attributes::DefaultImage::GRAVATAR
+            :rating  => Attributes::Rating::X
           }
 
           @@gravatar_options.update(options) if options.is_a?(Hash)

@@ -28,6 +28,7 @@
 module Gravatar
   module Attributes
     AVATAR_URL = "http://www.gravatar.com/avatar"
+    SECURE_AVATAR_URL = "https://secure.gravatar.com/avatar"
 
     module Rating
       G  = 'g'
@@ -53,11 +54,13 @@ module Gravatar
       if configuration[:default] =~ /^(https?:\/\/|\/)/i 
         configuration[:default] = CGI::escape(configuration[:default]) 
       end
-
+      
+      url = configuration.delete(:ssl) ? SECURE_AVATAR_URL : AVATAR_URL
+      
       email  = "#{self.send(configuration[:attr])}".downcase
       id     = Digest::MD5.hexdigest(email)
       params = configuration.collect{ |k, v| "#{k}=#{v}" }.join('&')
-      "#{AVATAR_URL}/#{id}?#{params}"
+      "#{url}/#{id}?#{params}"
     end
   end
 end
