@@ -57,7 +57,7 @@ Consider using:
 
 It may also take the same options as the `gravatar(..)` method in the mixin:
 
-  <%= gravatar_for user, { :attr => :email_address } %>
+  <%= gravatar_for user, { :attr => :email_address, :ssl => true } %>
 
 As well as HTML options, like the `image_tag` helper:
 

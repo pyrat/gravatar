@@ -55,7 +55,7 @@ module Gravatar
         configuration[:default] = CGI::escape(configuration[:default]) 
       end
       
-      url = configuration.delete(:ssl) ? SECURE_AVATAR_URL : AVATAR_URL
+      url = configuration.delete(:ssl) == true ? SECURE_AVATAR_URL : AVATAR_URL
       
       email  = "#{self.send(configuration[:attr])}".downcase
       id     = Digest::MD5.hexdigest(email)
