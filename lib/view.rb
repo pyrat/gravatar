@@ -4,7 +4,7 @@
 #
 #
 # Author::    Juris Galang (mailto:jurisgalang@gmail.com)
-# Copyright:: Copyright (c) 2009 Juris Galang
+# Copyright:: Copyright (c) 2010 Juris Galang
 # License::   MIT License
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
