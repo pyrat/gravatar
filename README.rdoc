@@ -1,15 +1,20 @@
-= Gravatar
+Gravatar
+========
 
 This plugin brings a mixin and a helper to associate Rails models with gravatar resources.
 
-== Installation
+
+Installation
+------------
 
   cd /path/to/app
   ./script/plugin install git://github.com/jurisgalang/gravatar.git
 
-== Usage
 
-Simply mixin the Gravatar module into the model that needs to be associated with a gravatar resource using the `has_gravatar` declaration:
+Usage
+-----
+
+Simply mixin the `Gravatar` module into the model that needs to be associated with a gravatar resource using the `has_gravatar` declaration:
 
   class User < ActiveRecord::Base
     has_gravatar
@@ -45,7 +50,9 @@ You can also supply and override these options to the gravatar method:
 
 See also: http://en.gravatar.com/site/implement/url
 
-== HTML Tag Helper
+
+HTML Tag Helper
+---------------
 
 An HTML tag helper is included. Wherever you might use:
 
@@ -64,4 +71,13 @@ As well as HTML options, like the `image_tag` helper:
   <%= gravatar_for user, { :attr => :email_address }, { :border => 5 } %>
 
 
-Copyright (c) 2009 Juris Galang, released under the MIT license
+Credits
+-------
+
++ Juris Galang <http://github.com/jurisgalang>
++ Alastair Brunton <http://github.com/pyrat>
+
+
+---
+
+Copyright &copy; 2009 Juris Galang, released under the MIT license
