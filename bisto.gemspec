@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Juris Galang", "Alastair Brunton"]
   s.email       = ["info@simplyexcited.co.uk"]
-  s.homepage    = "http://github.com/pyrat/solon"
+  s.homepage    = "https://github.com/jurisgalang/gravatar"
   s.summary     = "Associate Rails models with gravatar resources"
   s.description = "Associate Rails models with gravatar resources"
  
