@@ -24,6 +24,4 @@
 # THE SOFTWARE.
 #
 
-Gravatar
-ActionView::Base.send   :include, Gravatar::ActionView
-ActiveRecord::Base.send :include, Gravatar::ActiveRecord
+require File.dirname(__FILE__) + "/lib/gravatar"

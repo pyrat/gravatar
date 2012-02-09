@@ -29,6 +29,7 @@ require 'attributes'
 require 'view'
 require 'model'
 
-module Gravatar
-  VERSION = "0.0.3"
-end
+Gravatar
+ActionView::Base.send   :include, Gravatar::ActionView
+ActiveRecord::Base.send :include, Gravatar::ActiveRecord
+
